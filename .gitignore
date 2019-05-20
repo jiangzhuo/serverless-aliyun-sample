@@ -1,0 +1,7 @@
+aliyun_credential
+.idea
+dist
+/node_modules/
+/.build/
+/.serverless/
+/_warmup/
