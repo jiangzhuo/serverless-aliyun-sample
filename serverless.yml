@@ -17,11 +17,27 @@ package:
     - .git/**
 
 functions:
-  hellographql:
-    handler: src/main.handler
-    initializer: src/main.initializer
+  graphql:
+    handler: src/graphql.handler
+    initializer: src/graphql.initializer
     timeout: 10
     events:
       - http:
           method: any
           path: /graphql
+  upload:
+    handler: src/upload.handler
+    initializer: src/upload.initializer
+    timeout: 10
+    events:
+      - http:
+          method: any
+          path: /upload
+  download:
+    handler: src/download.handler
+    initializer: src/download.initializer
+    timeout: 10
+    events:
+      - http:
+          method: any
+          path: /download
