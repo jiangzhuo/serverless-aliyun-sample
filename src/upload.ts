@@ -97,11 +97,13 @@ module.exports.handler = function (event, context, callback) {
         // });
     });
 
-    const Readable = require('stream').Readable;
-    const s = new Readable();
-    s.push(Buffer.from(JSON.parse(event.toString()).body, 'base64').toString());
-    s.push(null);
-    s.pipe(busboy);
+    // const Readable = require('stream').Readable;
+    // const s = new Readable();
+    // s.push(Buffer.from(JSON.parse(event.toString()).body, 'base64').toString());
+    // s.push(null);
+    // s.pipe(busboy);
+    busboy.write(JSON.parse(event.toString()).body,'base64');
+    busboy.end();
 
     // console.log(context);
     // callback(null, { statusCode: 200, body: "ok" });
