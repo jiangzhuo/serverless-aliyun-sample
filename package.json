@@ -46,7 +46,7 @@
     "jest": "^24.8.0",
     "nodemon": "^1.19.0",
     "prettier": "^1.17.1",
-    "serverless-offline": "^4.10.3",
+    "serverless-offline": "^12.0.4",
     "serverless-plugin-optimize": "^4.0.2-rc.1",
     "supertest": "^4.0.2",
     "ts-jest": "^24.0.2",
